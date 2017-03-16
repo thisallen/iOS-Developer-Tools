@@ -17,10 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%f-%f", [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].bounds.size.width);
-
+#pragma mark -- 帧率显示
     AQFPS *fps = [AQFPS sharedInstance];
-    NSLog(@"%@", fps);
     [fps start];
 
 }

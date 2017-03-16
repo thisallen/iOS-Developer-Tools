@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2091511E7A782F00E03C6F /* UIView+FrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */; };
 		9F8C01B01E77B4700034CA3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01AF1E77B4700034CA3E /* main.m */; };
 		9F8C01B31E77B4700034CA3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01B21E77B4700034CA3E /* AppDelegate.m */; };
 		9F8C01B61E77B4700034CA3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01B51E77B4700034CA3E /* ViewController.m */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		9F20914D1E7A532C00E03C6F /* AQMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMacro.h; sourceTree = "<group>"; };
+		9F20914F1E7A782F00E03C6F /* UIView+FrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtension.h"; sourceTree = "<group>"; };
+		9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtension.m"; sourceTree = "<group>"; };
 		9F8C01AB1E77B4700034CA3E /* iOSDeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C01AF1E77B4700034CA3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F8C01B11E77B4700034CA3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +55,15 @@
 			path = AQMacro;
 			sourceTree = "<group>";
 		};
+		9F20914E1E7A780500E03C6F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9F20914F1E7A782F00E03C6F /* UIView+FrameExtension.h */,
+				9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		9F8C01A21E77B4700034CA3E = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +83,7 @@
 		9F8C01AD1E77B4700034CA3E /* iOSDeveloperTools */ = {
 			isa = PBXGroup;
 			children = (
+				9F20914E1E7A780500E03C6F /* Category */,
 				9F20914C1E7A531100E03C6F /* AQMacro */,
 				9F8C01C91E78D8EA0034CA3E /* AQSingleton */,
 				9F8C01C51E77B5100034CA3E /* AQFPS */,
@@ -187,6 +200,7 @@
 				9F8C01B61E77B4700034CA3E /* ViewController.m in Sources */,
 				9F8C01C81E77B5420034CA3E /* AQFPS.m in Sources */,
 				9F8C01B31E77B4700034CA3E /* AppDelegate.m in Sources */,
+				9F2091511E7A782F00E03C6F /* UIView+FrameExtension.m in Sources */,
 				9F8C01B01E77B4700034CA3E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
