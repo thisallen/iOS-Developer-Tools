@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F20914D1E7A532C00E03C6F /* AQMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMacro.h; sourceTree = "<group>"; };
 		9F8C01AB1E77B4700034CA3E /* iOSDeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C01AF1E77B4700034CA3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F8C01B11E77B4700034CA3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		9F8C01BF1E77B4700034CA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F8C01C61E77B5420034CA3E /* AQFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQFPS.h; sourceTree = "<group>"; };
 		9F8C01C71E77B5420034CA3E /* AQFPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQFPS.m; sourceTree = "<group>"; };
+		9F8C01CD1E78D9590034CA3E /* AQSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQSingleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F20914C1E7A531100E03C6F /* AQMacro */ = {
+			isa = PBXGroup;
+			children = (
+				9F20914D1E7A532C00E03C6F /* AQMacro.h */,
+			);
+			path = AQMacro;
+			sourceTree = "<group>";
+		};
 		9F8C01A21E77B4700034CA3E = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,8 @@
 		9F8C01AD1E77B4700034CA3E /* iOSDeveloperTools */ = {
 			isa = PBXGroup;
 			children = (
+				9F20914C1E7A531100E03C6F /* AQMacro */,
+				9F8C01C91E78D8EA0034CA3E /* AQSingleton */,
 				9F8C01C51E77B5100034CA3E /* AQFPS */,
 				9F8C01B11E77B4700034CA3E /* AppDelegate.h */,
 				9F8C01B21E77B4700034CA3E /* AppDelegate.m */,
@@ -90,6 +102,14 @@
 				9F8C01C71E77B5420034CA3E /* AQFPS.m */,
 			);
 			path = AQFPS;
+			sourceTree = "<group>";
+		};
+		9F8C01C91E78D8EA0034CA3E /* AQSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				9F8C01CD1E78D9590034CA3E /* AQSingleton.h */,
+			);
+			path = AQSingleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +344,7 @@
 				9F8C01C41E77B4700034CA3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

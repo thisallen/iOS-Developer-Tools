@@ -10,7 +10,19 @@
 #import <UIKit/UIKit.h>
 
 @interface AQFPS : NSObject
+/**
+ 单例方法
+ */
++ (instancetype)sharedInstance;
 
-+ (instancetype)shareInstance;
+/**
+ 开始运行帧率检测
+ */
+- (void)start;
+
+/**
+ 停止帧率检测
+ */
+- (void)stop;
 
 @end
