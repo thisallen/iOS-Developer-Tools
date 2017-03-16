@@ -22,18 +22,11 @@
 #define AutoRegist 0
 #endif
 
+#pragma mark --> 1.常用公共头文件
 
-//--> 1.常用公共头文件
-
-//#import "ACCHTTPTool.h"
-//#import "ACCAccountTool.h"
 //#import "Masonry.h"
 //#import "UIView+FrameExtension.h"
 //#import "MJExtension.h"
-//#import "ACCLabel.h" // 带inset的label
-//#import "ACCButton.h" // 能调整图片和文字相对位置的button
-//#import "ACCTextField.h"
-//#import "ACCBigButton.h"
 //#import "MBProgressHUD.h"
 //#import "UIImage+Color.h"
 //#import "UIButton+Position.h"
@@ -41,13 +34,10 @@
 //#import "WPAttributedStyleAction.h"
 //#import "NSString+WPAttributedMarkup.h"
 //#import <SDWebImage/UIImageView+WebCache.h>
-//
-//#import "TPKeyboardAvoidingScrollView.h"
-//#import "UIScrollView+TPKeyboardAvoidingAdditions.h"
 
-//--> 2.获取宽高尺寸
+#pragma mark --> 2.获取屏幕宽高尺寸
 // 需要横屏或者竖屏，获取屏幕宽度与高度
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当前Xcode支持iOS8及以上
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当iOS8及以上时
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)
@@ -59,24 +49,32 @@
 #endif
 //相对iphone5 屏幕宽度比
 #define kWidth_ScaleToiPhone5    [UIScreen mainScreen].bounds.size.width/320.0f
-//各种设备及模式
-#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
-#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
-#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
-#define iPhone6PlusBigMode ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define GScreenSize   [[UIScreen mainScreen] bounds].size
-#define GScreenWidth  [[UIScreen mainScreen] bounds].size.width
-#define GScreenHeight [[UIScreen mainScreen] bounds].size.height
 
-//--> 3.判断当前的iPhone设备
+#pragma mark --> 3.判断当前的iPhone设备
 //判断是否为iPhone
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 //判断是否为iPad
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 //判断是否为ipod
 #define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当iOS8及以上时
+// 判断是否为 iPhone 4
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断是否为 iPhone 5或5SE
+#define iPhone5_5s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断是否为iPhone 6/6s
+#define iPhone6_6s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断是否为iPhone 6Plus/6sPlus
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断是否为放大模式
+#define iPhone6PlusBigMode ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#else
+
+// 判断是否为 iPhone 4
+#define iPhone4 [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 480.0f
 // 判断是否为 iPhone 5或5SE
 #define iPhone5_5s [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
 // 判断是否为iPhone 6/6s
@@ -84,12 +82,15 @@
 // 判断是否为iPhone 6Plus/6sPlus
 #define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
 
-//--> 4.获取系统版本
+#endif
+
+
+#pragma mark --> 4.获取系统版本
 #define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 //判断 iOS 8 或更高的系统版本
 #define IOS_VERSION_8_OR_LATER (([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)? (YES):(NO))
 
-//--> 5.字体与颜色
+#pragma mark --> 5.字体与颜色
 #define SYS_FONT(x)     [UIFont systemFontOfSize:x]
 #define SYS_FONT_SMALL  [UIFont systemFontOfSize:12]    //小字体
 #define SYS_FONT_MIDDLE [UIFont systemFontOfSize:14]    //中字体
@@ -118,14 +119,14 @@
 //默认View中大按钮深红色
 #define kButtonColor RGB(219, 44, 44)
 
-//--> 6.weak对象
-#define ACCWeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
-#define ACCStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
+#pragma mark --> 6.weak对象
+#define AQWeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+#define AQStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
-//--> 7.消息中心
-#define NotificationCenter [NSNotificationCenter defaultCenter]
+#pragma mark --> 7.消息中心
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
 
-//--> 8.获取图片资源
+#pragma mark --> 8.获取图片资源
 // 普通方法
 #define kGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
 // 类方法
@@ -136,7 +137,7 @@
 //viewName.backgroundColor = kBackgroundColor;\
 //viewName.backgroundView = [[UIImageView alloc] initWithImage:kGetImage(@"placeHolder.png")];\
 //viewName.backgroundView.contentMode = UIViewContentModeCenter;
-//--> 9.设置加载提示框（第三方框架：MBProgressHUD）
+#pragma mark --> 9.设置加载提示框（第三方框架：MBProgressHUD）
 // 加载提示器
 #define kShowHUDAndActivity kShowHUD;kShowNetworkActivityIndicator()
 // 隐藏提示器
@@ -196,10 +197,10 @@ NSProgress *progress = [self doSomethingInBackgroundCompletion:^{\
 hud.progressObject = progress
 // 隐藏kwindow上自定义提示器
 
-//--> 10.数据库表名
+#pragma mark --> 10.数据库表名
 #define Document_Path  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]
 
-//--> 11.设置 view 圆角和边框
+#pragma mark --> 11.设置 view 圆角和边框
 #define SetViewBorderRadius(View, Radius, Width, Color)\
 \
 [View.layer setCornerRadius:(Radius)];\
@@ -207,20 +208,20 @@ hud.progressObject = progress
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
 
-//--> 12.由角度转换弧度 由弧度转换角度
+#pragma mark --> 12.由角度转换弧度 由弧度转换角度
 #define DegreesToRadian(x) (M_PI * (x) / 180.0)
 #define RadianToDegrees(radian) (radian*180.0)/(M_PI)
 
-//--> 13.获取当前语言
+#pragma mark --> 13.获取当前语言
 #define LRCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 
-//--> 14.使用 ARC 和 MRC
+#pragma mark --> 14.使用 ARC 和 MRC
 #if __has_feature(objc_arc)
 // ARC
 #else
 // MRC
 #endif
-//--> 15.判断是真机还是模拟器
+#pragma mark --> 15.判断是真机还是模拟器
 #if TARGET_OS_IPHONE
 //iPhone Device
 #endif
@@ -229,7 +230,7 @@ hud.progressObject = progress
 //iPhone Simulator
 #endif
 
-//--> 16.沙盒目录文件
+#pragma mark --> 16.沙盒目录文件
 //获取temp
 #define kPathTemp NSTemporaryDirectory()
 
@@ -239,7 +240,7 @@ hud.progressObject = progress
 //获取沙盒 Cache
 #define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
-//--> 17.GCD 的宏定义
+#pragma mark --> 17.GCD 的宏定义
 //GCD - 一次性执行
 #define kDISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
 
@@ -249,7 +250,7 @@ hud.progressObject = progress
 //GCD - 开启异步线程
 #define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
 
-//--> 18.自定义高效率的 DLog
+#pragma mark --> 18.自定义高效率的 DLog
 #ifdef DEBUG
 #define AQLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
@@ -268,7 +269,7 @@ hud.progressObject = progress
 //return YES;
 //}
 
-//--> 19.一些数值
+#pragma mark --> 19.一些数值
 #define kScreenMargin 12
 #define kInsetMargin 6
 #define kBottomBtnHeight 48
@@ -278,7 +279,7 @@ hud.progressObject = progress
 #define kYiShuJiaBigItemW (SCREEN_WIDTH-kScreenMargin*4)/3
 #define kYiShuJiaItemW (SCREEN_WIDTH-kScreenMargin*8)/4
 
-//--> 20.btn添加点击事件
+#pragma mark --> 20.btn添加点击事件
 #define kButtonTouchUpInsideClick(btn, click) [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside]
 
 

@@ -17,8 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%f-%f", [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].bounds.size.width);
 
-    
     AQFPS *fps = [AQFPS sharedInstance];
     NSLog(@"%@", fps);
     [fps start];
