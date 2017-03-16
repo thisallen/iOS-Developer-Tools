@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F2091511E7A782F00E03C6F /* UIView+FrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */; };
+		9F2091551E7A7F1700E03C6F /* UIView+FrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091541E7A7F1700E03C6F /* UIView+FrameExtension.m */; };
+		9F20915F1E7A7FEA00E03C6F /* NSObject+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */; };
+		9F2091621E7A8D0800E03C6F /* NSArray+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091611E7A8D0800E03C6F /* NSArray+AQUnicode.m */; };
+		9F2091651E7A94B700E03C6F /* NSDictionary+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091641E7A94B700E03C6F /* NSDictionary+AQUnicode.m */; };
+		9F2091721E7AB86500E03C6F /* NSSet+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091711E7AB86500E03C6F /* NSSet+AQUnicode.m */; };
 		9F8C01B01E77B4700034CA3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01AF1E77B4700034CA3E /* main.m */; };
 		9F8C01B31E77B4700034CA3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01B21E77B4700034CA3E /* AppDelegate.m */; };
 		9F8C01B61E77B4700034CA3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01B51E77B4700034CA3E /* ViewController.m */; };
@@ -19,8 +23,16 @@
 
 /* Begin PBXFileReference section */
 		9F20914D1E7A532C00E03C6F /* AQMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMacro.h; sourceTree = "<group>"; };
-		9F20914F1E7A782F00E03C6F /* UIView+FrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtension.h"; sourceTree = "<group>"; };
-		9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtension.m"; sourceTree = "<group>"; };
+		9F2091531E7A7F1700E03C6F /* UIView+FrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtension.h"; sourceTree = "<group>"; };
+		9F2091541E7A7F1700E03C6F /* UIView+FrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtension.m"; sourceTree = "<group>"; };
+		9F20915D1E7A7FEA00E03C6F /* NSObject+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AQUnicode.h"; sourceTree = "<group>"; };
+		9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AQUnicode.m"; sourceTree = "<group>"; };
+		9F2091601E7A8D0800E03C6F /* NSArray+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AQUnicode.h"; sourceTree = "<group>"; };
+		9F2091611E7A8D0800E03C6F /* NSArray+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AQUnicode.m"; sourceTree = "<group>"; };
+		9F2091631E7A94B700E03C6F /* NSDictionary+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AQUnicode.h"; sourceTree = "<group>"; };
+		9F2091641E7A94B700E03C6F /* NSDictionary+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AQUnicode.m"; sourceTree = "<group>"; };
+		9F2091701E7AB86500E03C6F /* NSSet+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+AQUnicode.h"; sourceTree = "<group>"; };
+		9F2091711E7AB86500E03C6F /* NSSet+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+AQUnicode.m"; sourceTree = "<group>"; };
 		9F8C01AB1E77B4700034CA3E /* iOSDeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C01AF1E77B4700034CA3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F8C01B11E77B4700034CA3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,10 +70,34 @@
 		9F20914E1E7A780500E03C6F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				9F20914F1E7A782F00E03C6F /* UIView+FrameExtension.h */,
-				9F2091501E7A782F00E03C6F /* UIView+FrameExtension.m */,
+				9F2091591E7A7F6500E03C6F /* AQUnicode */,
+				9F2091521E7A7F1700E03C6F /* UIView */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		9F2091521E7A7F1700E03C6F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				9F2091531E7A7F1700E03C6F /* UIView+FrameExtension.h */,
+				9F2091541E7A7F1700E03C6F /* UIView+FrameExtension.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		9F2091591E7A7F6500E03C6F /* AQUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				9F20915D1E7A7FEA00E03C6F /* NSObject+AQUnicode.h */,
+				9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */,
+				9F2091701E7AB86500E03C6F /* NSSet+AQUnicode.h */,
+				9F2091711E7AB86500E03C6F /* NSSet+AQUnicode.m */,
+				9F2091601E7A8D0800E03C6F /* NSArray+AQUnicode.h */,
+				9F2091611E7A8D0800E03C6F /* NSArray+AQUnicode.m */,
+				9F2091631E7A94B700E03C6F /* NSDictionary+AQUnicode.h */,
+				9F2091641E7A94B700E03C6F /* NSDictionary+AQUnicode.m */,
+			);
+			path = AQUnicode;
 			sourceTree = "<group>";
 		};
 		9F8C01A21E77B4700034CA3E = {
@@ -197,11 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2091621E7A8D0800E03C6F /* NSArray+AQUnicode.m in Sources */,
 				9F8C01B61E77B4700034CA3E /* ViewController.m in Sources */,
 				9F8C01C81E77B5420034CA3E /* AQFPS.m in Sources */,
 				9F8C01B31E77B4700034CA3E /* AppDelegate.m in Sources */,
-				9F2091511E7A782F00E03C6F /* UIView+FrameExtension.m in Sources */,
+				9F20915F1E7A7FEA00E03C6F /* NSObject+AQUnicode.m in Sources */,
+				9F2091551E7A7F1700E03C6F /* UIView+FrameExtension.m in Sources */,
+				9F2091651E7A94B700E03C6F /* NSDictionary+AQUnicode.m in Sources */,
 				9F8C01B01E77B4700034CA3E /* main.m in Sources */,
+				9F2091721E7AB86500E03C6F /* NSSet+AQUnicode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
