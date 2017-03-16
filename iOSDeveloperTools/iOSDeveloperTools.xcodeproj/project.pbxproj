@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F2091551E7A7F1700E03C6F /* UIView+FrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091541E7A7F1700E03C6F /* UIView+FrameExtension.m */; };
-		9F20915F1E7A7FEA00E03C6F /* NSObject+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */; };
 		9F2091621E7A8D0800E03C6F /* NSArray+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091611E7A8D0800E03C6F /* NSArray+AQUnicode.m */; };
 		9F2091651E7A94B700E03C6F /* NSDictionary+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091641E7A94B700E03C6F /* NSDictionary+AQUnicode.m */; };
 		9F2091721E7AB86500E03C6F /* NSSet+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2091711E7AB86500E03C6F /* NSSet+AQUnicode.m */; };
@@ -19,14 +18,13 @@
 		9F8C01BB1E77B4700034CA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8C01BA1E77B4700034CA3E /* Assets.xcassets */; };
 		9F8C01BE1E77B4700034CA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8C01BC1E77B4700034CA3E /* LaunchScreen.storyboard */; };
 		9F8C01C81E77B5420034CA3E /* AQFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C01C71E77B5420034CA3E /* AQFPS.m */; };
+		9F9BD81C1E7AD88500E4C8E3 /* NSString+AQUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BD81B1E7AD88500E4C8E3 /* NSString+AQUnicode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F20914D1E7A532C00E03C6F /* AQMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMacro.h; sourceTree = "<group>"; };
 		9F2091531E7A7F1700E03C6F /* UIView+FrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtension.h"; sourceTree = "<group>"; };
 		9F2091541E7A7F1700E03C6F /* UIView+FrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtension.m"; sourceTree = "<group>"; };
-		9F20915D1E7A7FEA00E03C6F /* NSObject+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AQUnicode.h"; sourceTree = "<group>"; };
-		9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AQUnicode.m"; sourceTree = "<group>"; };
 		9F2091601E7A8D0800E03C6F /* NSArray+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AQUnicode.h"; sourceTree = "<group>"; };
 		9F2091611E7A8D0800E03C6F /* NSArray+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AQUnicode.m"; sourceTree = "<group>"; };
 		9F2091631E7A94B700E03C6F /* NSDictionary+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AQUnicode.h"; sourceTree = "<group>"; };
@@ -46,6 +44,8 @@
 		9F8C01C61E77B5420034CA3E /* AQFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQFPS.h; sourceTree = "<group>"; };
 		9F8C01C71E77B5420034CA3E /* AQFPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQFPS.m; sourceTree = "<group>"; };
 		9F8C01CD1E78D9590034CA3E /* AQSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQSingleton.h; sourceTree = "<group>"; };
+		9F9BD81A1E7AD88500E4C8E3 /* NSString+AQUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AQUnicode.h"; sourceTree = "<group>"; };
+		9F9BD81B1E7AD88500E4C8E3 /* NSString+AQUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AQUnicode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 		9F2091591E7A7F6500E03C6F /* AQUnicode */ = {
 			isa = PBXGroup;
 			children = (
-				9F20915D1E7A7FEA00E03C6F /* NSObject+AQUnicode.h */,
-				9F20915E1E7A7FEA00E03C6F /* NSObject+AQUnicode.m */,
+				9F9BD81A1E7AD88500E4C8E3 /* NSString+AQUnicode.h */,
+				9F9BD81B1E7AD88500E4C8E3 /* NSString+AQUnicode.m */,
 				9F2091701E7AB86500E03C6F /* NSSet+AQUnicode.h */,
 				9F2091711E7AB86500E03C6F /* NSSet+AQUnicode.m */,
 				9F2091601E7A8D0800E03C6F /* NSArray+AQUnicode.h */,
@@ -236,8 +236,8 @@
 				9F2091621E7A8D0800E03C6F /* NSArray+AQUnicode.m in Sources */,
 				9F8C01B61E77B4700034CA3E /* ViewController.m in Sources */,
 				9F8C01C81E77B5420034CA3E /* AQFPS.m in Sources */,
+				9F9BD81C1E7AD88500E4C8E3 /* NSString+AQUnicode.m in Sources */,
 				9F8C01B31E77B4700034CA3E /* AppDelegate.m in Sources */,
-				9F20915F1E7A7FEA00E03C6F /* NSObject+AQUnicode.m in Sources */,
 				9F2091551E7A7F1700E03C6F /* UIView+FrameExtension.m in Sources */,
 				9F2091651E7A94B700E03C6F /* NSDictionary+AQUnicode.m in Sources */,
 				9F8C01B01E77B4700034CA3E /* main.m in Sources */,

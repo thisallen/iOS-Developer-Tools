@@ -7,30 +7,29 @@
 //
 
 #import "NSArray+AQUnicode.h"
-#import "NSObject+AQUnicode.h"
+#import "NSString+AQUnicode.h"
+#import <objc/message.h>
 
 @implementation NSArray (AQUnicode)
 
 #if DEBUG
-ExchangMethod
 
-//+ (void)load{
-//    [[self class] exchangeSysMethod:@selector(description) withMyMethod:@selector(myDescription)];
-//    [[self class] exchangeSysMethod:@selector(descriptionWithLocale:) withMyMethod:@selector(myDescriptionWithLocale:)];
-//    [[self class] exchangeSysMethod:@selector(descriptionWithLocale:indent:) withMyMethod:@selector(myDescriptionWithLocale:indent:)];
-//}
-//
-//
-//- (NSString *)myDescription{
-//    return [self stringFromUnicode:[self myDescription]];
-//}
-//
-//- (NSString *)myDescriptionWithLocale:(id)locale{
-//    return [self stringFromUnicode:[self myDescriptionWithLocale:locale]];
-//}
-//
-//- (NSString *)myDescriptionWithLocale:(id)locale indent:(NSUInteger)level{
-//    return [self stringFromUnicode:[self myDescriptionWithLocale:locale indent:level]];
-//}
++ (void)load{
+    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(description)), class_getInstanceMethod([self class], @selector(myDescription)));
+    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(descriptionWithLocale:)), class_getInstanceMethod([self class], @selector(myDescriptionWithLocale:)));
+    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(descriptionWithLocale:indent:)), class_getInstanceMethod([self class], @selector(myDescriptionWithLocale:indent:)));
+}
+
+- (NSString *)myDescription{
+    return [self myDescription].unicodeString;
+}
+
+- (NSString *)myDescriptionWithLocale:(id)locale{
+    return [self myDescriptionWithLocale:locale].unicodeString;
+}
+
+- (NSString *)myDescriptionWithLocale:(id)locale indent:(NSUInteger)level{
+    return [self myDescriptionWithLocale:locale indent:level].unicodeString;
+}
 #endif
 @end
